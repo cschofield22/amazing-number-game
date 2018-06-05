@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<title>Clodagh Andrea and Nasreen's fun game'</title>
+<style>
+	div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+div.container {
+  height: 10em;
+  position: relative
+}
+
+div.container div {
+  margin: 0;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+  }</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class=container>
+	  <div>
+
+	    Enter your number here: <br>
+
+	    <input id="Icecream" type="text" Number="digit"> <br>
+
+	    <button id="whenButtonsAttack" type="submit" class="btn btn-primary" value="Guess a number, please">GUESS!</button>
+
+
+	  </div>
+	</div>
+<script>
+$(function() {
+  var randomNumber = Math.floor(Math.random() * 100);
+  console.log(randomNumber)
+
+  // get the button and assign it to a name
+  var ourButton = document.getElementById('whenButtonsAttack');
+
+  // have a function that we will cause to run on button click
+  ourFunction = function() {
+    var Icecream = document.getElementById('Icecream').value;
+
+
+    if (Icecream > randomNumber) {
+      alert("You guessed too high. Ha ha.");
+    }
+    if (Icecream < randomNumber) {
+      alert("You guessed too low. Ha ha.");
+    }
+    if (Icecream == randomNumber) {
+      alert("Wow. You got it.");
+    }
+
+  }
+
+  // attach a click listener to the button that calls the function
+  ourButton.addEventListener('click', ourFunction);
+
+
+
+})
+</script></body>
+</html>
+
+
+
+
+
+
+
